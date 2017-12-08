@@ -1,0 +1,45 @@
+<html>
+        <head>
+                <title>Zero Sector - Home</title>
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+            </style>
+            <!--jQuery and Javascript-->
+            <script
+                        src="https://code.jquery.com/jquery-3.2.1.min.js"
+                        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                        crossorigin="anonymous"></script>
+            <script>
+                    $(document).ready(function(){
+                            var trigger = 0;
+                            setTimeout(function(){
+                    $("#test").removeClass('text').addClass('text2');
+                  
+    
+    
+                    setInterval(function () {
+                    var number = parseInt($('#chk').text().trim());
+                    $("#chk").show();
+                    $("#chk").removeClass('text').addClass('text3');
+                    $("#load").show()
+
+                    }, 0);
+            },5000); 
+    
+                    });
+            </script>
+    
+                <script type='text/javascript'>
+                window.onload = function () {
+                    $("#chk").hide(500);
+                document.getElementById("player").volume = 0.1; 
+                }
+                </script>
+        </head>
+        <body>
+                <div id="test" class="text">Zero Sector Home Version 0.1 - Copright(C) Zero Sector 1990</div>  
+                <p class="text" style="display:none" id="load"><a href="https://blog.zerosector.io"style="color:#bbFFbb;">C:/Blog.html</a></p>
+                 <!--FOR AUDIO-->
+                 <audio id="player" autoplay="true" src="audio/disk.mp3" /> 
+                 <!--FOR AUDIO-->      
+        </body>
+    </html>

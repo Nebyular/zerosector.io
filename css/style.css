@@ -13,6 +13,34 @@ body { background: black }
   min-width: 360px;
 }
 
+.text2 {
+  font-family: Fixedsys, Monaco, Arial, Helvetica, sans-serif;
+  line-height: 14px;
+  font-size: 14px;
+  color: #bbFFbb;
+  text-shadow: 0 0 8px #99FF99;
+  /*color: white;*/
+  min-width: 360px;
+}
+
+.a:link { 
+  color: #bbFFbb;
+  text-shadow: 0 0 8px #99FF99;
+}
+
+.a:visited { 
+  color: #bbFFbb;
+  text-shadow: 0 0 8px #99FF99;
+}
+.a:hover { 
+  color: #bbFFbb;
+  text-shadow: 0 0 100px #99FF99;
+}
+.a:active { 
+  color: #bbFFbb;
+  text-shadow: 0 0 8px #99FF99;
+}
+
 .text::after {
   content: "";
   /*position: absolute;*/
