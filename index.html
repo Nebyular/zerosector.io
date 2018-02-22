@@ -12,45 +12,46 @@
                 $(document).ready(function(){
                         var trigger = 0;
                         setTimeout(function(){
-                $("#test").removeClass('text').addClass('text2');
-                                $("#test").html("0x01...")
-              
-
-
-                setInterval(function () {
-                var number = parseInt($('#chk').text().trim());
-                $("#chk").show();
-                if (number != 1024) {
-                number++
-                $('#chk').html(number+" KB");
-                }
-                else{
-                $('#chk').html(number+" KB OK!");
-                $("#chk").removeClass('text').addClass('text2');
-                $("#load").show()
-                setInterval(function () {
-                        $('#load').html("Loading.");
-                },5000);
-                 setInterval(function () {
-                        $('#load').html("Loading..");
+                                $("#test").removeClass('text').addClass('text2');
+                                $("#test").html("0x01...");
+                                setInterval(function () {
+                                        var number = parseInt($('#chk').text().trim());
+                                        $("#chk").show();
+                                        if (number != 1024) {
+                                                number++
+                                                $('#chk').html(number+" KB");
+                                        }
+                                        else{
+                                                $('#chk').html(number+" KB OK!");
+                                                $("#chk").removeClass('text').addClass('text2');
+                                                $("#load").show()
+                                                setInterval(function () {
+                                                        $('#load').html("Loading.");
+                                                },5000);
+                                                setInterval(function () {
+                                                        $('#load').html("Loading..");
                         
-                 },5000);
-                 setInterval(function () {
-                        $('#load').html("Loading...");
-                        trigger++
-                 },5000);
+                                                },5000);
+                                                setInterval(function () {
+                                                        $('#load').html("Loading...");
+                                                        trigger++
+                                                },5000);
      
-                 if (trigger = 1){
-                setInterval(function () {
-                        window.location.href = "home.html"
-                        trigger++
+                                                if (trigger = 1){
+                                                        setInterval(function () {
+                                                                window.location.href = "home.html"
+                                                                trigger++
 
-                 },5000);
-                        }
-                }
-                }, 0);
 
-        },5000); 
+                                                        },5000);
+                                                }
+                                        }
+                                        if (trigger > 1) {
+                                                                        break;
+                                                                }
+                                }, 0);
+
+                        },5000); 
 
                 });
         </script>
