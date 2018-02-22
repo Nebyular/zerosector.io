@@ -17,11 +17,11 @@
                                 setInterval(function () {
                                         var number = parseInt($('#chk').text().trim());
                                         $("#chk").show();
-                                        if (number != 1024) {
+                                        while (number != 1024) {
                                                 number++
                                                 $('#chk').html(number+" KB");
                                         }
-                                        else{
+                                        if (number == 1024){
                                                 $('#chk').html(number+" KB OK!");
                                                 $("#chk").removeClass('text').addClass('text2');
                                                 $("#load").show()
@@ -46,10 +46,7 @@
                                                         },5000);
                                                 }
                                         }
-                                        if (trigger > 1) {
-                                                                        break;
-                                                                }
-                                }, 0);
+                                }, 5000);
 
                         },5000); 
 
