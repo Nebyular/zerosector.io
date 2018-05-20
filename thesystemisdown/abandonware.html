@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Abandonware</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cover.css">
+      <link rel="stylesheet" type="text/css" href="/css/custom.css"
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+      
+      <script>
+          function hideFunction() {
+              var a = document.getElementById('hide');
+              var b = document.getElementById('hide2');
+              var c = document.getElementById('hide3');
+              if (a.style.display === 'none') {
+                  a.style.display = 'block';
+                  b.style.display = 'none';
+                  c.style.display = 'none';
+              } else {
+                  a.style.display = 'none';
+              }
+          }
+          function hideFunction1() {
+              var a = document.getElementById('hide');
+              var b = document.getElementById('hide2');
+              var c = document.getElementById('hide3');
+              if (b.style.display === 'none') {
+                  b.style.display = 'block';
+                  c.style.display = 'none';
+                  a.style.display = 'none';
+              } else {
+                  b.style.display = 'none';
+              }
+          }
+          function hideFunction2() {
+              var a = document.getElementById('hide');
+              var b = document.getElementById('hide2');
+              var c = document.getElementById('hide3');
+              if (c.style.display === 'none') {
+                  c.style.display = 'block';
+                  a.style.display = 'none';
+                  b.style.display = 'none';
+              } else {
+                  c.style.display = 'none';
+              }
+          }
+      </script>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+                <h3 class="masthead-brand"><a href="https://thesystemisdown.io" style="text-decoration: none"> <slant>The System is Down</slant></a> </h3>
+                <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="cover.html">Home</a></li>
+                  <li><a href="https://blog.thesystemisdown.io/">Blog</a></li>
+                  <li class="active"><a href="abandonware.html">abandonware</a></li>
+                  <li><a href="projects.html">projects</a></li>
+                  <li><a href="video.html">A Random Video</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h2 class="cover-heading"><slant>Abandonware</slant></h2>
+              <p></p>
+              <button type="button" onclick="hideFunction()" class="btn" style="color: #FFFFFF;background-color: #333;border-color: #2E2E2E;"><img class="invimg" src="/images/glyphicons-social/png/glyphicons-social-45-windows.png"> Windows</button>
+              <button type="button" onclick="hideFunction1()" class="btn" style="color: #FFFFFF;background-color: #333;border-color: #2E2E2E;"><img class="invimg" src="/images/glyphicons/png/glyphicons-444-floppy-disk.png"> DOS</button>
+              <button type="button" onclick="hideFunction2()" class="btn" style="color: #FFFFFF;background-color: #333;border-color: #2E2E2E;"><img class="invimg" src="/images/glyphicons/png/glyphicons-412-package.png"> Software</button>
+              <p id="hide" style="display:none;" class="lead">Coming Soon</p>
+              <p id="hide2" style="display:none;" class="lead">Coming Soon</p>
+              <p id="hide3" style="display:none;" class="lead">Coming Soon</p>
+                  <div class="mastfoot">
+                      <div class="inner">
+<p>Created with <a href="http://getbootstrap.com">Bootstrap</a>  and<a href="https://code.visualstudio.com/"> Visual Studio Code</a>, by <a href="https://twitter.com/nebyular">@nebyular</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+        </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

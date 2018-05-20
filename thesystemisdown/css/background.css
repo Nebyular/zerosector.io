@@ -1,0 +1,38 @@
+<!--body {
+	background:url(images/heh.jpg) no-repeat center center fixed;	
+	-webkit-background-size: cover; /*Used by Safari & Chrome*/
+	-moz-background-size: cover; /* Used by Firefox */
+	-o-background-size: cover; /* Used by Opera */
+	background-size: cover; /* All Modern Browsers */	
+} -->
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('images/heh.png') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+h1 {
+font-family: 'VT323';
+font-weight: 400;
+font-size: 100px;
+color: #ffffff; 
+}
+tcontainer {
+     position: absolute;
+     margin: auto;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     width: 50%;
+     height: 25%;
+}

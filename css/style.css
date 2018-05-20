@@ -12,6 +12,17 @@ body { background: black }
   /*color: white;*/
   min-width: 360px;
 }
+.textnoblnk { 
+  position: relative;
+  display: inline-block;
+  font-family: Fixedsys, Monaco, Arial, Helvetica, sans-serif;
+  line-height: 14px;
+  font-size: 14px;
+  color: #bbFFbb;
+  text-shadow: 0 0 8px #99FF99;
+  /*color: white;*/
+  min-width: 360px;
+}
 
 .text2 {
   font-family: Fixedsys, Monaco, Arial, Helvetica, sans-serif;
@@ -74,4 +85,10 @@ body { background: black }
   0% { opacity: 1.0; }
   50% { opacity: 0.0; }
   100% { opacity: 1.0; }
+}
+
+/*Custom*/ 
+ul {
+  padding: 0;
+  text-align: left; 
 }

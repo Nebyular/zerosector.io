@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Welcome</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cover.css">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+      <link href="css/background.css" rel="stylesheet" type="text/css" />
+      <!--JS for HTML5 Audio-->
+      <script type='text/javascript'>
+//<![CDATA[
+          window.onload = function () {
+              var audio = document.getElementById("player");
+              var audio = document.getElementById("player");
+              audio.volume = 0.08;
+              var counter = 1;
+              var nextSong;
+              audio.addEventListener("ended", function () {
+                  if (counter == 0) {
+                      audio.src = "audio/MM_S3_Introducing.mp3"; //audio/MM_CE_Looking_Back.mp3
+                      counter++;
+                  }
+                  else if (counter == 1) {
+                      audio.src = "audio/MM_S3_Melting_Point.mp3"; //audio/MM_CE_Intermission.mp3
+                      counter++;
+                  }
+                  else if (counter == 2) {
+                      audio.src = "audio/TM_ES_Crocketts_Revenge.mp3"; //audio/MM_CE_In_The_News.mp3
+                      counter = 0;
+                  }
+                  else {
+
+                  }
+
+                  //audio.src = Next(counter);
+                  //counter++;
+
+                  audio.play();
+              });
+          }//]]>
+
+      </script>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+                <h3 class="masthead-brand"><a href="https://zerosector.io/thesystemisdown/index.html" style="text-decoration: none"> <slant>The System is Down</slant></a> </h3>
+                <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="https://blog.zerosector.io/">Blog</a></li>
+                  <li><a href="abandonware.html">Abandonware</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="video.html">A Random Video</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+              <video preload="auto" autoplay="true" loop="loop" muted volume="0" width="100%" height="auto">
+                  <source src="images/VHS2.webm" type="video/webm" />
+                  <source src="images/VHS2.mp4" type="video/mp4" />
+                  <img src="images/heh.jpg" no-repeat center center fixed title="Your browser does not support the <video> tag" />
+              </video>
+              <!--
+    LICENSE NOTICE
+    Original video created by Chistopher Huppertz under the Creative Commons 4.0 License
+    https://creativecommons.org/licenses/by/4.0/legalcode
+    I have transformed this video under the license.
+    Original video can be found at: https://gumroad.com/l/vhs_glitch_color
+    -->
+              </video>
+
+              <tcontainer>
+                  <img id="logo" width="100%" height=auto" align="center" src="images/TSIDv2AltSmall.png" onmouseout="this.src=' images/TSIDv2AltSmall.png '" onmouseover="this.src=' images/TSIDv2Small.png '" />
+              </tcontainer>
+              <!--FOR AUDIO-->
+              <audio id="player" autoplay="true" src="audio/MM_S3_Introducing.mp3" /> //MM_CE_Looking_Back.mp3
+              <!--FOR AUDIO-->
+          </div>
+
+          <div class="mastfoot" style="width:100%;">
+            <div class="inner">
+              <p>Created with <a href="http://getbootstrap.com">Bootstrap</a>  and<a href="https://code.visualstudio.com/"> Visual Studio Code<a>, by <a href="https://twitter.com/nebyular">@nebyular</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

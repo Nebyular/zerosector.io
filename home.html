@@ -20,26 +20,25 @@
                     var number = parseInt($('#chk').text().trim());
                     $("#chk").show();
                     $("#chk").removeClass('text').addClass('text3');
-                    $("#load").show()
+                    $("#blog").show()
+                    $("#tsid").show()
 
                     }, 0);
-            },5000); 
+            },500); 
     
                     });
             </script>
     
-                <script type='text/javascript'>
-                window.onload = function () {
-                    $("#chk").hide(500);
-                document.getElementById("player").volume = 0.1; 
-                }
-                </script>
+
         </head>
         <body>
-                <div id="test" class="text">Zero Sector Home Version 0.1 - Copright(C) Zero Sector 1990</div>  
-                <p class="text" style="display:none" id="load"><a href="https://blog.zerosector.io"style="color:#bbFFbb;">C:/Blog.html</a></p>
-                 <!--FOR AUDIO-->
-                 <audio id="player" autoplay="true" src="audio/disk.mp3" /> 
-                 <!--FOR AUDIO-->      
+                <div id="test" class="text">Zero Sector Home Version 0.1 - Copright(C) Zero Sector 1990</div> 
+                <ul>
+                        <li class="textnoblnk" style="display:none" id="blog"><a href="https://blog.zerosector.io"style="color:#bbFFbb;">C:/Blog.html</a></li><br>
+                        <li class="text" style="display:none" id="tsid"><a href="https://zerosector.io/thesystemisdown"style="color:#bbFFbb;">C:/OldSite.html</a></li>
+                </ul> 
+                <p class="text" style="display:none" id="blog"><a href="https://blog.zerosector.io"style="color:#bbFFbb;">C:/Blog.html</a></p>
+                <p class="text" style="display:none" id="tsid"><a href="https://zerosector.io/thesystemisdown"style="color:#bbFFbb;">C:/OldSite.html</a></p>   
+   
         </body>
     </html>

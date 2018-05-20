@@ -1,0 +1,9 @@
+.invimg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.btn-blk {
+    color: #FFFFFF;
+    background-color: #333;
+    border-color: #474747;
+}
