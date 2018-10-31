@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>DNS Blocklist Check</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <!-- Local Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/bootstrap.js" rel="script">
+
+    <!-- Page CSS -->
+    <link href="css/amiblocked.css" rel="stylesheet">
+    <script src="js/amiblocked.js"></script> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="row" style="vertical-align: middle; horiz-align: center;">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>DNS Blocklist Check</h1>
+        <form>
+            <div id="blocked" class="alert alert-danger" role="alert" style="display: none;"><span glyphicon glyphicon-exclamation-sign alert-dismissable aria-hidden="true"><span class="sr-only">Error:</span>Your DNS/ISP is blocking sites</span></div>
+            <div id="notblocked" class="alert alert-success" role="alert" style="display: none;"><span glyphicon glyphicon-ok-sign alert-dismissable aria-hidden="true"><span class="sr-only">Error:</span>Your DNS/ISP is not blocking sites</span></div>
+            
+
+            <div class="form-group">
+            <input list="isps" class="form-control" id="ispinput" placeholder="ISP Name">
+            <datalist id="isps">
+              <option value="Telstra">
+                <option value="Bigpond"></option>
+                <option value="Foxtel Broadband"></option>
+                <option value="Belong"></option>
+              <option value="TPG">
+                <option value="iiNet">
+                <option value="AAPT"></option>
+                <option value="Westnet"></option>
+                <option value="PIPE Networks"></option>
+                <option value="Netspace"></option>
+                <option value="TransACT"></option>
+                <option value="Internode">
+              <option value="Optus">
+              <option value="iPrimus">
+                <option value="Dodo"></option>
+               
+            </datalist> 
+        </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="DNS IP coming soon..."  disabled>
+            </div>
+            <button id="submit" type="button" onclick="myFunction()"" class="btn btn-default btn-lg btn-block">Check</button>
+        </form>
+        <div id="blocklist" class="panel panel-default" style="display: none;"">
+            <div class="panel-heading">List of sites</div>
+            <div class="panel-body" style="color: black">
+                <p>See below for the list of sites currently blocked by your ISP</p>
+            </div>
+
+            <!-- Table -->
+            
+            <table class="table" style="color: black;">
+                <tr>
+                    <th>Name</th>
+                    <th>Domain</th>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.se</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>bayproxy.pw</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>downloadbay.eu</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>fastpiratebay.co.uk</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>fastpiratebay.eu</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>magnetsearch.org</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>mypirateproxy.com</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirate.guru</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirateahoy.eu</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>piratebay.host</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>piratebaymirror.eu</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>piratebayproxy.be</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>piratebays.co.uk</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirateproxy.ca</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirateproxy.tf</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirateproxy.wf</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>pirateproxy.yt</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thebay.tv</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.casa</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.cd</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.cr</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.expert</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.org</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.uk.net</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.xn--fiqs8s</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay.xn--q9jyb4c</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepiratebay-proxy.com</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>thepirateboat.eu</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>tpbmirror.us</td>
+                </tr>
+                <tr>
+                    <td>The Pirate Bay</td>
+                    <td>urbanproxy.eu</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.eu</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentsmirror.com</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.ch</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.com</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.hk</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.in</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.li</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.me</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz.ph</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>torrentz-proxy.com</td>
+                </tr>
+                <tr>
+                    <td>Torrentz</td>
+                    <td>tz.ai</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.com</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.at</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.cm</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.immunicity.info</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.ru</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.to</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound.unlocktor.eu</td>
+                </tr>
+                <tr>
+                    <td>TorrentHound</td>
+                    <td>torrenthound-proxy.com</td>
+                </tr>
+                <tr>
+                    <td>IsoHunt</td>
+                    <td>isohunt.to</td>
+                </tr>
+                <tr>
+                    <td>IsoHunt</td>
+                    <td>isohunt.duhsoft.com</td>
+                </tr>
+                <tr>
+                    <td>IsoHunt</td>
+                    <td>isohunt.kooaba.net</td>
+                </tr>
+                <tr>
+                    <td>IsoHunt</td>
+                    <td>isohunt.st</td>
+                </tr>
+                <tr>
+                    <td>IsoHunt</td>
+                    <td>isohunters.net</td>
+                </tr>
+                <tr>
+                    <td>SolarMovie</td>
+                    <td>solarmovie.ph</td>
+                </tr>
+                <tr>
+                    <td>SolarMovie</td>
+                    <td>solarmovie.is</td>
+                </tr>
+                <tr>
+                    <td>SolarMovie</td>
+                    <td>solarmovie.com</td>
+                </tr>
+                <tr>
+                    <td>SolarMovie</td>
+                    <td>solarmovie.eu</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kat.al</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>skattor.xyz</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kickass.cd</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kickass.immunicity.date</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kickass.pe</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kickass.ukbypass.download</td>
+                </tr>
+                <tr>
+                    <td>KickAss Torrent</td>
+                    <td>kickass.unblocked.tv</td>
+                </tr>
+                <tr>
+                    <td>Data courtesy of: <a href="https://s115a.com">s115a.com</a></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+</body>
+</html>

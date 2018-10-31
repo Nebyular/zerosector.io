@@ -1,71 +1,46 @@
 <html>
-    <head>
-            <title>Zero Sector - 0x00</title>
-            <link rel="stylesheet" type="text/css" href="css/style.css">
-        </style>
-        <!--jQuery and Javascript-->
-        <script
-                    src="https://code.jquery.com/jquery-3.2.1.min.js"
-                    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                    crossorigin="anonymous"></script>
-        <script>
-                $(document).ready(function(){
-                        var trigger = 0;
-                        setTimeout(function(){
-                                $("#test").removeClass('text').addClass('text2');
-                                $("#test").html("0x01...");
-                                setInterval(function () {
-                                        var number = parseInt($('#chk').text().trim());
-                                        $("#chk").show();
-                                        while (number != 1024) {
-                                                number++
-                                                $('#chk').html(number+" KB");
-                                        }
-                                        if (number == 1024){
-                                                $('#chk').html(number+" KB OK!");
-                                                $("#chk").removeClass('text').addClass('text2');
-                                                $("#load").show()
-                                                setInterval(function () {
-                                                        $('#load').html("Loading.");
-                                                },5000);
-                                                setInterval(function () {
-                                                        $('#load').html("Loading..");
-                        
-                                                },5000);
-                                                setInterval(function () {
-                                                        $('#load').html("Loading...");
-                                                        trigger++
-                                                },5000);
-     
-                                                if (trigger == 1){
-                                                        setInterval(function () {
-                                                                window.location.href = "home.html"
-                                                                trigger++
+        <head>
+                <title>Zero Sector - Home</title>
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+            </style>
+            <!--jQuery and Javascript-->
+            <script
+                        src="https://code.jquery.com/jquery-3.2.1.min.js"
+                        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                        crossorigin="anonymous"></script>
+            <script>
+                    $(document).ready(function(){
+                            var trigger = 0;
+                            setTimeout(function(){
+                    $("#test").removeClass('text').addClass('text2');
+                  
+    
+    
+                    setInterval(function () {
+                    var number = parseInt($('#chk').text().trim());
+                    $("#chk").show();
+                    $("#chk").removeClass('text').addClass('text3');
+                    $("#blog").show()
+                    $("#tsid").show()
+                    $("#dns").show()
+                    $("#28k").show()
 
-
-                                                        },5000);
-                                                }
-                                        }
-                                }, 5000);
-
-                        },5000); 
-
-                });
-        </script>
-
-            <script type='text/javascript'>
-            window.onload = function () {
-                $("#chk").hide(500);
-            document.getElementById("player").volume = 0.1; 
-            }
+                    }, 0);
+            },1500); 
+    
+                    });
             </script>
-    </head>
-    <body>
-            <div id="test" class="text">0x00</div>  
-            <p class="text" id="chk">0</p>
-            <p class="text" style="display:none" id="load">Loading</p>
-             <!--FOR AUDIO-->
-             <audio id="player" autoplay="true" src="audio/disk.mp3" /> 
-             <!--FOR AUDIO-->      
-    </body>
-</html>
+    
+
+        </head>
+        <body>
+                <div id="test" class="text">Zero Sector Version 0.1 - Copyright(C) Zero Sector 1994</div> 
+                <ul>
+                        <li class="textnoblnk" style="display:none" id="blog"><a href="https://blog.zerosector.io"style="color:#bbFFbb;">C:/Blog.html</a></li><br>
+                        <li class="textnoblnk" style="display:none" id="tsid"><a href="https://zerosector.io/thesystemisdown"style="color:#bbFFbb;">C:/OldSite.html</a></li><br>
+                        <li class="textnoblnk" style="display:none" id="dns"><a href="https://zerosector.io/dnsblocklistcheck"style="color:#bbFFbb;">C:/DNSBlockListChecker.html</a></li><br>
+                        <li class="text" style="display:none" id="28k"><a href="https://zerosector.io/28k"style="color:#bbFFbb;">C:/28K.html</a></li>
+                </ul> 
+   
+        </body>
+    </html>
